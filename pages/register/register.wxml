@@ -1,0 +1,11 @@
+<view>
+  <image class="userAvatar" bindtap="doUpload" src="{{userAvatarUrl}}" mode="aspectFill"></image>
+  <view style="text-align: center;font-weight: 200;">点击图片上传头像</view>
+</view>
+<view style="margin-top: 100rpx;" >
+    <van-cell-group>
+    <van-field model:value="{{ userNickName }}"  label="用户名" placeholder="请输入用户名"  clearable required center size="large"/>
+    </van-cell-group>
+</view>
+
+<button type="primary" style="width: 300rpx;margin-top: 200rpx;" bindtap="submitUserInfo">提交</button>

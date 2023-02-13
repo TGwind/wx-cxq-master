@@ -1,0 +1,83 @@
+/* pages/ppt/ppt.wxss */
+.header {
+  width: 100%;
+  border: 1px solid rgb(233, 226, 226);
+  box-shadow: 0px 15px 10px -18px rgb(175, 165, 165);
+}
+
+.header .headImg {
+  width: 100%;
+}
+
+.header .text {
+  padding-top: 20rpx;
+  padding-left: 25rpx;
+  font-size: 38rpx;
+  color: #000000;
+}
+
+.header .date {
+  margin-top: rpx;
+  margin-left: 25rpx;
+  font-size: 32rpx;
+  color: #838383;
+}
+
+.header .visitNum {
+  float: right;
+  margin-right: 15rpx;
+  font-size: 32rpx;
+  color: #838383;
+}
+
+.brief {
+  margin-top: 60rpx;
+}
+
+.brief .title {
+  float: left;
+  font-weight: 600;
+  font-size: 38rpx;
+}
+
+.brief .page {
+  font-size: 32rpx;
+  text-align: center;
+  width: 200rpx;
+  height: 45rpx;
+  float: right;
+  border: 2rpx solid #482aae;
+  border-radius: 100rpx;
+  color: rgb(240, 233, 240);
+  background-color: #482aae;
+}
+
+.brief .bar {
+  background-color: #482aae;
+  width: 10rpx;
+  height: 60rpx;
+  float: left;
+  margin-left: 15rpx;
+  margin-right: 5rpx;
+}
+
+.PPTImgCard {
+  margin-top: 5rpx;
+  float: right;
+
+}
+.PPTImgCard .img{
+  width: 720rpx;
+}
+
+.content{
+  padding: 50rpx 20rpx ;
+  padding-bottom: 500rpx;
+}
+.icon-on{
+  width: 350rpx;
+  color: #0268FF;
+}
+.icon-off{
+  width: 350rpx;
+}

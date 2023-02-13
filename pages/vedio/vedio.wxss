@@ -1,0 +1,64 @@
+/* pages/vedio/vedio.wxss */
+.header{
+  width: 100%;
+}
+.header .video{
+  width: 100%;
+}
+.header .text {
+  padding-top: 20rpx;
+  padding-left: 25rpx;
+  font-size: 38rpx;
+  color: #000;
+}
+
+.header .date {
+  margin-top: rpx;
+  margin-left: 25rpx;
+  font-size: 32rpx;
+  color: #838383;
+}
+
+.header .visitNum {
+  float: right;
+  margin-right: 15rpx;
+  font-size: 32rpx;
+  color: #838383;
+}
+.icon-on{
+  width: 350rpx;
+  color: #0268FF;
+}
+.icon-off{
+  width: 350rpx;
+}
+.timenodelist{
+  width: 700rpx;
+  background-color: #FFFFFF;
+  height: 80rpx;
+  margin: 30rpx 20rpx;
+  text-align: left;
+  border-radius: 30rpx;
+  /* box-shadow: 0px 15px 10px -12px rgb(175, 165, 165); */
+
+}
+.timenodelist .timenode{
+  margin-left: 30rpx;
+  line-height: 80rpx;
+  color: #838383;
+  font-size: 34rpx;
+  float: left;
+  width: 230rpx;
+  text-align: left;
+}
+.timenodelist .timename{
+  margin-left: 60rpx;
+  float: left;
+  text-align: left;
+  line-height: 80rpx;
+  width: 250rpx;
+}
+.timenodelist .icon{
+  float: left;
+  margin: 10rpx 20rpx;
+}

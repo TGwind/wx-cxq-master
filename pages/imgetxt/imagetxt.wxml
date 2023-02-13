@@ -1,0 +1,26 @@
+<view class="header">
+  <image class="headImg" mode="aspectFit" src="{{Info.coverImgUrl}}"></image>
+  <view class="text">{{Info.title}}</view>
+  <view style="margin-top:20rpx;">
+    <text class="date">{{Info.uploadDate}}</text>
+    <text class="visitNum">{{Info.visitNum}}次阅读</text>
+  </view>
+</view>
+
+<!-- <view class="content">
+  <rich-text nodes="{{Info.htmlText}}"></rich-text>
+</view> -->
+<view class="content">
+  <mp-html content="{{Info.htmlText}}" />
+</view>
+
+
+<van-goods-action>
+  <van-goods-action-icon wx:if="{{likeValue==true}}" icon="like" icon-class="icon-on" text="喜欢"   bind:click="onLike" />
+  <van-goods-action-icon wx:elif="{{likeValue==false}}" icon="like-o" icon-class="icon-off" text="喜欢"   bind:click="onLike" />
+
+  <van-goods-action-icon wx:if="{{starValue==true}}" icon="star" icon-class="icon-on" text="收藏"   bind:click="onStar" />
+  <van-goods-action-icon wx:elif="{{starValue==false}}" icon="star-o" icon-class="icon-off" text="收藏"   bind:click="onStar" />
+  
+</van-goods-action>
+

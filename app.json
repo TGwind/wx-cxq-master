@@ -1,0 +1,65 @@
+{
+  "lazyCodeLoading": "requiredComponents",
+  "cloud": true,
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/game/game",
+    "pages/search/index",
+    "pages/user/user",
+    "pages/user/histroy",
+    "pages/user/collection",
+    "pages/user/like",
+    "pages/user/toSee",
+    "pages/user/message",
+    "pages/user/joinVip",
+    "pages/user/Service",
+    "pages/user/customization",
+    "pages/register/register",
+    "pages/ppt/ppt",
+    "pages/imgetxt/imagetxt",
+    "pages/vedio/vedio"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FAFAFA",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 50,
+    "backgroundColor": "#FAFAFA"
+  },
+  "tabBar": {
+    "color": "#BCBCBC",
+    "selectedColor": "#0268FF",
+    "list": [{
+        "pagePath": "pages/index/index",
+        "iconPath": "images/nav/index-off.png",
+        "selectedIconPath": "images/nav/index-on.png",
+        "text": "首页推荐"
+      },
+      {
+        "pagePath": "pages/game/game",
+        "iconPath": "images/nav/game-off.png",
+        "selectedIconPath": "images/nav/game-on.png",
+        "text": "汇报答辩"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "images/nav/user-off.png",
+        "selectedIconPath": "images/nav/user-on.png",
+        "text": "个人主页"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

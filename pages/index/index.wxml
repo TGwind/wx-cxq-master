@@ -1,0 +1,131 @@
+<!-- 首页搜索框 -->
+<van-search placeholder="请输入搜索关键词" bindtap="goSearch" use-right-icon-slot>
+  <van-icon slot="right-icon" name="scan" />
+</van-search>
+
+
+<view>
+  <!-- 首页轮播图 -->
+  <swiper easing-function="default" indicator-dots="true" indicator-active-color="#fff" autoplay circular>
+    <swiper-item wx:for="{{swiperList}}" wx:key="index">
+      <image style="width: 100%;height: 100%;" src="{{item.imgUrl}}" />
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class="TagPageView">
+  <!-- 标签页的导航栏 -->
+  <van-tabs sticky swipeable animated color="#0268FF" active="{{ activeTab }}" tab-active-class="tab-activce" tab-class="tab-class">
+
+    <van-tab title="图文笔记" name="图文笔记">
+      <view class="buttonView">
+        <view class="{{activeButton1=='全部' ? 'buttonOn' : 'buttonOff'}}" data-button="全部" bindtap="gotoimg_txt_classify">全部</view>
+        <view class="{{activeButton1=='小白基础' ? 'buttonOn' : 'buttonOff'}}" data-button="小白基础" bindtap="gotoimg_txt_classify">小白基础</view>
+        <view class="{{activeButton1=='高手进阶' ? 'buttonOn' : 'buttonOff'}}" data-button="高手进阶" bindtap="gotoimg_txt_classify">高手进阶</view>
+        <view class="{{activeButton1=='改稿实操' ? 'buttonOn' : 'buttonOff'}}" data-button="改稿实操" bindtap="gotoimg_txt_classify">改稿实操</view>
+      </view>
+
+      <view class="PPTCardList" wx:for="{{img_txt_classify}}" wx:key="index" data-info="{{item}}" bindtap="gotoImageTxt">
+        <view>
+          <image class="imge" src="{{item.coverImgUrl}}" mode="aspectFill"></image>
+        </view>
+        <view>
+          <view class="text">
+            {{item.title}}
+          </view>
+          <view style="margin-top: 15rpx;">
+            <van-tag class="Tag" size="medium"  round text-color="#838383" color="#f2f2f2" wx:for="{{item.tags}}" wx:key="index">{{item}}</van-tag>
+          </view>
+          <view class="visitNum">
+            {{item.visitNum}}次阅读
+          </view>
+        </view>
+      </view>
+    </van-tab>
+
+    <van-tab title="视频教学">
+      <view class="buttonView">
+        <view class="{{activeButton2=='全部' ? 'buttonOn' : 'buttonOff'}}" data-button="全部" bindtap="gotovideo_classify">全部</view>
+        <view class="{{activeButton2=='小白基础' ? 'buttonOn' : 'buttonOff'}}" data-button="小白基础" bindtap="gotovideo_classify">小白基础</view>
+        <view class="{{activeButton2=='高手进阶' ? 'buttonOn' : 'buttonOff'}}" data-button="高手进阶" bindtap="gotovideo_classify">高手进阶</view>
+        <view class="{{activeButton2=='改稿实操' ? 'buttonOn' : 'buttonOff'}}" data-button="改稿实操" bindtap="gotovideo_classify">改稿实操</view>
+      </view>
+      <view class="video-PPTCardList" >
+        <view class="card" wx:for="{{video_classify}}" wx:key="index" data-vedioinfo="{{item}}" bindtap="gotoVedio">
+          <view>
+            <image class="imge" src="{{item.coverImgUrl}}" mode="aspectFill"></image>
+          </view>
+          <view class="text">
+            <!-- <view style="float: left;color:#c81e1e;">
+            【{{item.head_title}}】
+          </view> -->
+            <view>
+              {{item.title}}
+            </view>
+          </view>
+          <view>
+            <van-tag class="tag" size="medium" round text-color="#838383" color="#f2f2f2" wx:for="{{item.tags}}">{{item}}</van-tag>
+          </view>
+          <view class="visitNum">
+            {{item.visitNum}}次阅读
+          </view>
+        </view>
+      </view>
+    </van-tab>
+
+    <van-tab title="系统课程">
+      <view class="buttonView">
+        <view class="{{activeButton3=='全部' ? 'buttonOn' : 'buttonOff'}}" data-button="全部" bindtap="gotoButton3">全部</view>
+        <view class="{{activeButton3=='小白基础' ? 'buttonOn' : 'buttonOff'}}" data-button="小白基础" bindtap="gotoButton3">小白基础</view>
+        <view class="{{activeButton3=='高手进阶' ? 'buttonOn' : 'buttonOff'}}" data-button="高手进阶" bindtap="gotoButton3">高手进阶</view>
+        <view class="{{activeButton3=='实战演练' ? 'buttonOn' : 'buttonOff'}}" data-button="实战演练" bindtap="gotoButton3">实战演练</view>
+      </view>
+      <view class="PPTCardList" wx:for="{{PPTCardList03}}" wx:key="index">
+        <view>
+          <image class="imge" src="{{item.coverImgUrl}}" mode="widthFix"></image>
+        </view>
+        <view>
+          <view class="text">
+            {{item.text}}
+          </view>
+          <view style="margin-top: 15rpx;">
+            <van-tag class="Tag" size="medium"  round text-color="#838383" color="#f2f2f2" wx:for="{{item.tags}}">{{item}}</van-tag>
+          </view>
+          <view class="visitNum">
+            {{item.visitNum}}次阅读
+          </view>
+        </view>
+      </view>
+    </van-tab>
+
+    <van-tab title="PPT模板">
+      <view class="buttonView">
+        <view class="{{activeButton4=='全部' ? 'buttonOn' : 'buttonOff'}}" data-button="全部" bindtap="gotoppt_classify">全部</view>
+        <view class="{{activeButton4=='医疗行业' ? 'buttonOn' : 'buttonOff'}}" data-button="医疗行业" bindtap="gotoppt_classify">医疗行业</view>
+        <view class="{{activeButton4=='金融行业' ? 'buttonOn' : 'buttonOff'}}" data-button="金融行业" bindtap="gotoppt_classify">金融行业</view>
+        <view class="{{activeButton4=='科技行业' ? 'buttonOn' : 'buttonOff'}}" data-button="科技行业" bindtap="gotoppt_classify">科技行业</view>
+      </view>
+      <view class="module-PPTCardList" wx:for="{{ppt_classify}}" wx:key="index" data-pptinfo="{{item}}" bindtap="gotoPPT">
+        <view>
+          <image class="imge" src="{{item.coverImgUrl}}" mode="aspectFill"></image>
+        </view>
+        <view class="text">
+          <!-- <view style="float: left;color:#c81e1e;">
+            【{{item.textHead}}】
+          </view> -->
+          <view style="text-align: center;">
+            {{item.title}}
+          </view>
+        </view>
+        <view>
+          <van-tag class="tag" size="medium" round text-color="#838383" color="#f2f2f2" wx:for="{{item.tags}}">{{item}}</van-tag>
+        </view>
+        <view class="visitNum">
+          {{item.visitNum}}次阅读
+        </view>
+      </view>
+    </van-tab>
+  </van-tabs>
+</view>
+<!-- //页面页脚图标 -->
+<!-- <image class="foot" mode="widthFix" src="{{bottomImage}}"></image> -->

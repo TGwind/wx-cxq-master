@@ -1,0 +1,33 @@
+<!--pages/ppt/ppt.wxml-->
+<view class="header">
+  <image class="headImg" mode="aspectFill" src="{{pptinfo.coverImgUrl}}"></image>
+  <view class="text">{{pptinfo.title}}</view>
+  <view style="margin-top:20rpx;">
+    <text class="date">{{pptinfo.uploadDate}}</text>
+    <text class="visitNum">{{pptinfo.visitNum}}次阅读</text>
+  </view>
+</view>
+
+<view class="brief">
+  <view class="bar"></view>
+  <view class="title">
+    模板一览
+  </view>
+  <view class="page">共 {{pptinfo.imgUrlList.length}} 页</view>
+</view>
+
+<view style="margin-top: 30rpx;">
+  <view class="PPTImgCard" wx:for="{{pptinfo.imgUrlList}}" wx:key="index">
+    <image class="img" src="{{item}}" mode="aspectFit" data-imgUrlList="{{pptinfo.imgUrlList}}" bindtap="previewImg" />
+  </view>
+</view>
+
+<van-goods-action>
+  <van-goods-action-icon wx:if="{{likeValue==true}}" icon="like" icon-class="icon-on" text="喜欢"   bind:click="onLike" />
+  <van-goods-action-icon wx:elif="{{likeValue==false}}" icon="like-o" icon-class="icon-off" text="喜欢"   bind:click="onLike" />
+
+  <van-goods-action-icon wx:if="{{starValue==true}}" icon="star" icon-class="icon-on" text="收藏"   bind:click="onStar" />
+  <van-goods-action-icon wx:elif="{{starValue==false}}" icon="star-o" icon-class="icon-off" text="收藏"   bind:click="onStar" />
+  
+  <van-goods-action-button color="#0268FF" text="下载"  bind:click="downLoadPPT" />
+</van-goods-action>

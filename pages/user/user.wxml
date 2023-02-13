@@ -1,0 +1,78 @@
+<!-- <view class="page" style="background-color: {{bgColor}}"> -->
+<!-- Notify通知节点 -->
+<van-notify id="van-notify" />
+<view class="card-head">
+  <view style="width: 720rpx;height: 200rpx;">
+    <image class="userphoto" src="{{userInfo.userAvatarUrl}}" mode="aspectFill" />
+    <view style="float: left;">
+      <text style="margin: 0 0;font-size: 48rpx;font-weight: 700;">
+        Hi，{{userInfo.userNickName}}同学</text>
+      <!-- <text style="font-weight: 400;">
+        今天是你学习的第xxx天
+      </text> -->
+    </view>
+    <van-icon name="chat-o" dot size="80rpx" bindtap="gotoMessage" style="margin-top: 70rpx;float: right;margin-right: 20rpx;" />
+  </view>
+</view>
+<view class="option" bindtap="gotoJoinVip">
+  <image src="/images/nav/tag.png" mode="aspectFill"></image>
+  <view>
+    <text class="text1">成为创小圈优质会员
+      <text class="text2">免费解锁更多小圈优质资源！</text>
+    </text>
+    <text class="text3">立即加入></text>
+  </view>
+</view>
+
+<view class="card-body">
+  <!-- <view class="icon" bindtap="gotoHistroy">
+    <van-icon class="icon" color="#0268FF" name="clock-o" size="90rpx" /><text>
+      历史浏览</text>
+  </view> -->
+  <view class="icon" bindtap="gotoLike">
+    <van-icon class="icon" color="#0268FF" name="like-o" size="90rpx" /><text>
+      我的喜欢</text>
+  </view>
+  <view class="icon" bindtap="gotoCollection">
+    <van-icon class="icon" color="#0268FF" name="star-o" size="90rpx" /><text>
+      我的收藏</text>
+  </view>
+  <!-- <view class="icon" bindtap="gotoToSee">
+    <van-icon class="icon" color="#0268FF" name="todo-list-o" size="90rpx" /><text>
+      我的待看</text>
+  </view> -->
+</view>
+
+<view class="bottomCard">
+  <view class="bar">
+    <van-icon name="sign" color="#0268FF" size="60rpx" />
+    <view class="text4">内容订阅一览</view>
+    <van-icon name="arrow" color="#0268FF" size="60rpx" style="float: right;margin:10rpx 10rpx;" />
+  </view>
+  <view class="bar">
+    <van-icon name="user-o" color="#0268FF" size="60rpx" />
+    <view style="font-size: 32rpx;font-weight: 200;float: left;line-height: 80rpx;">编辑个人信息</view>
+    <van-icon name="arrow" color="#0268FF" size="60rpx" style="float: right;margin:10rpx 10rpx;" />
+  </view>
+  <view class="bar" bindtap="showPopup">
+    <van-icon name="brush-o" color="#0268FF" size="60rpx" />
+    <view style="font-size: 32rpx;font-weight: 200;float: left;line-height: 80rpx;">主题颜色更换</view>
+    <van-icon name="arrow" color="#0268FF" size="60rpx" style="float: right;margin:10rpx 10rpx;" />
+  </view>
+  <view class="bar" bindtap="gotoService">
+    <van-icon name="service" color="#0268FF" size="60rpx" />
+    <view style="font-size: 32rpx;font-weight: 200;float: left;line-height: 80rpx;">联系我们</view>
+    <van-icon name="arrow" color="#0268FF" size="60rpx" style="float: right;margin:10rpx 10rpx;" />
+  </view>
+</view>
+
+<!-- 
+<van-popup show="{{ show }}" position="bottom" bind:close="onClose" custom-style="height: 20%" bind:close="onClose">
+  <view bindtap="dayTheme">日间主题</view>
+  <view bindtap="nightTheme">夜间主题</view>
+  <view bindtap="red">夜间主题</view>
+</van-popup> -->
+<van-button round bindtap="login" size="large" color="#0268FF">登录</van-button>
+  　
+
+<!-- </view> -->

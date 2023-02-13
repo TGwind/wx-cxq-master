@@ -1,0 +1,107 @@
+/* pages/user/user.wxss */
+.card-head {
+  width: 720rpx;
+  height: 220rpx;
+  margin: 10rpx auto;
+}
+
+.card-head .userphoto {
+  width: 170rpx;
+  margin: 30rpx 20rpx;
+  float: left;
+  height: 170rpx;
+  border-radius: 100rpx;
+}
+
+.card-body {
+  width: 720rpx;
+  height: 200rpx;
+  margin: 30rpx;
+  background-color: #FFFFFF;
+}
+
+.card-body .icon {
+  margin: 10rpx 20rpx;
+  float: left;
+  font-weight: 300;
+}
+
+
+
+.option {
+  margin: 0 auto;
+  margin-top: 10rpx;
+  width: 720rpx;
+  height: 150rpx;
+  border-radius: 20rpx;
+  background: linear-gradient(to right, #0268FF, #069FFD);
+}
+
+.option image {
+  margin-left: 30rpx;
+  margin-top: 5rpx;
+  float: left;
+  width: 115rpx;
+  height: 130rpx;
+}
+
+.option view {
+  margin-left: 60rpx;
+}
+
+.option .text1 {
+  height: fit-content;
+  width: fit-content;
+  float: left;
+  color: #FFFFFF;
+  font-size: 32rpx;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+}
+
+.option .text2 {
+  margin-top: 8rpx;
+  height: fit-content;
+  width: fit-content;
+  font-weight: 200;
+  color: #FFFFFF;
+  float: left;
+  font-size: 26rpx;
+}
+
+.option .text3 {
+  float: right;
+  color: #FFFFFF;
+  line-height: 150rpx;
+  margin-right: 30rpx;
+
+}
+
+.bottomCard {
+  width: 720rpx;
+  height: fit-content;
+  margin: 10rpx;
+  border-radius: 8px;
+}
+
+.bar {
+  width: 700rpx;
+  height: 80rpx;
+}
+
+.bar van-icon {
+  margin: 10rpx 10rpx;
+  float: left;
+}
+
+.text4 {
+  font-size: 32rpx;
+  font-weight: 200;
+  float: left;
+  line-height: 80rpx;
+}
+
+.arrow-icon {
+  float: right;
+  margin: 10rpx 10rpx;
+}

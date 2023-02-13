@@ -1,0 +1,56 @@
+/* pages/user/histroy.wxss */
+.header{
+  width: 720rpx;
+  height: 200rpx;
+  margin: 0 auto;
+  /* border: 1px solid rgb(233, 226, 226);
+  box-shadow: 0px 15px 10px -18px rgb(175, 165, 165);  */
+}
+.header .img{
+  width: 180rpx;
+  height: 180rpx;
+  margin: 10rpx 30rpx;
+  float: left;
+  border-radius: 300rpx;
+}
+.header .icon{
+  margin-top: 50rpx;
+  margin-right: 30rpx;
+  float: right;
+}
+.card {
+  width: 720rpx;
+  margin: 20rpx auto;
+  background: #ffffff;
+  border-radius: 16rpx;
+  display: flex;
+  /* border: 1px solid rgb(233, 226, 226);
+  box-shadow: 0px 15px 10px -12px rgb(175, 165, 165); */
+}
+.card .imge {
+  width: 400rpx;
+  height: 260rpx;
+  flex-shrink: 0;
+  border-radius: 30rpx;
+}
+
+.card .Tag {
+  margin-left: 24rpx;
+}
+.card .text {
+  margin: 5rpx 10rpx;
+  font-size: 36rpx;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  margin-left: 24rpx;
+}
+.card .visitNum {
+  width: 80%;
+  float: right;
+  /* 文本靠右 */
+  text-align: right;   
+  font-size: 24rpx;
+  font-weight: 100;
+  color: rgb(0, 0, 0);
+  margin-top: 15%;
+}

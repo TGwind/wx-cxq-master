@@ -1,0 +1,35 @@
+<view class="header">
+  <image class="img" src="{{userInfo.userAvatarUrl}}" mode="aspectFill" />
+  <text style="font-size: 40rpx;font-weight: 500;float: left;">
+    Hi,{{userInfo.userNickName}}
+    <text style="font-weight: 300;font-size: 34rpx;">你一共喜欢了 {{likeNum}} 篇内容
+    </text>
+  </text>
+  <van-icon class="icon" color="#482aae" name="clock-o" size="90rpx" />
+</view>
+
+<view>
+  <view style="width: 20rpx;height: 70rpx;background-color: #0268FF;margin: 40rpx 20rpx;float: left;">
+  </view><text style="font-size: 36rpx;">
+  我的喜欢</text>
+</view>
+  
+
+<view style="padding-bottom: 200px;">
+  <view class="card" wx:for="{{likeList}}" wx:key="index" data-type="{{item.type}}" data-info="{{item}}"  bindtap="gotoCard">
+    <view>
+      <image class="imge" src="{{item.coverImgUrl}}" mode="aspectFit"></image>
+    </view>
+    <view>
+      <view class="text">
+        {{item.title}}
+      </view>
+      <view style="margin-top: 15rpx;">
+        <van-tag class="Tag" size="medium" plain round text-color="#878787" color="#f2f2f2" wx:for="{{item.tags}}" wx:key="index">{{item}}</van-tag>
+      </view>
+      <view class="visitNum">
+        {{item.visitNum}}次阅读
+      </view>
+    </view>
+  </view>
+</view>

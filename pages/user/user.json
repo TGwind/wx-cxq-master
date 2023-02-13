@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "个人主页",
+  "component": true,
+  "usingComponents": {
+    "van-icon": "@vant/weapp/icon/index",
+    "van-notify": "@vant/weapp/notify/index",
+    "van-button": "@vant/weapp/button/index"
+
+  }
+}

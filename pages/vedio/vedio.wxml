@@ -1,0 +1,30 @@
+<view class="header">
+  <video id="myVideo" class="video" title="{{vedioinfo.title}}" enable-play-gesture="true" custom-cache="true" show-snapshot-button="true" src="{{vedioinfo.vedioUrl}}"></video>
+  <view class="text">{{vedioinfo.title}}</view>
+  <view style="margin-top:20rpx;">
+    <text class="date">{{vedioinfo.uploadDate}}</text>
+    <text class="visitNum">{{vedioinfo.visitNum}}次阅读</text>
+  </view>
+</view>
+
+<van-goods-action>
+  <van-goods-action-icon wx:if="{{likeValue==true}}" icon="like" icon-class="icon-on" text="喜欢" bind:click="onLike" />
+  <van-goods-action-icon wx:elif="{{likeValue==false}}" icon="like-o" icon-class="icon-off" text="喜欢" bind:click="onLike" />
+
+  <van-goods-action-icon wx:if="{{starValue==true}}" icon="star" icon-class="icon-on" text="收藏" bind:click="onStar" />
+  <van-goods-action-icon wx:elif="{{starValue==false}}" icon="star-o" icon-class="icon-off" text="收藏" bind:click="onStar" />
+
+</van-goods-action>
+<view style="margin-bottom: 70rpx;">
+  <view style="width: 15rpx;height: 70rpx;background-color: #0268FF;margin: 40rpx 20rpx;float: left;">
+  </view><text style="font-size: 36rpx;">
+    内容降落伞：</text>
+</view>
+
+<block wx:for="{{vedioinfo.nodeName}}" wx:key="index">
+  <view class="timenodelist">
+    <van-icon class="icon" color="#838383" size="60rpx" name="underway-o" />
+    <view class="timenode">{{timeList[index]}}-{{timeList[index+1]}}</view>
+    <view class="timename" data-index="{{index}}" bindtap="gotoSeek">{{item}}</view>
+  </view>
+</block>

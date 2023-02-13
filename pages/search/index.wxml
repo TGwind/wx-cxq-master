@@ -1,0 +1,20 @@
+<van-search placeholder="请输入搜索关键词" focus use-right-icon-slot value="{{searchInput}}" bind:change="inputChange" bind:search="search">
+</van-search>
+<view class="PPTCardList" wx:for="{{search_answer}}" wx:key="index" data-type="{{item.type}}"  data-info="{{item}}" bindtap="gotoCard">
+  <view>
+    <image class="imge" src="{{item.coverImgUrl}}" mode="aspectFill"></image>
+  </view>
+  <view>
+    <view class="text">
+      {{item.title}}
+    </view>
+    <view style="margin-top: 15rpx;">
+      <van-tag class="Tag" size="medium" round text-color="#838383" color="#f2f2f2" wx:for="{{item.tags}}" wx:key="index">{{item}}</van-tag>
+    </view>
+    <view class="visitNum">
+      {{item.visitNum}}次阅读
+    </view>
+  </view>
+</view>
+
+<!-- <text>搜索字符串：{{searchInput}}</text> -->

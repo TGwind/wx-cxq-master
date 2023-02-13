@@ -1,0 +1,44 @@
+/* pages/search/index.wxss */
+.searchView {
+  border: 3rpx solid #faca82;
+  border-radius: 30rpx;
+  padding: 10rpx;
+}
+
+.PPTCardList {
+  justify-content: center;
+  margin: 20rpx;
+  background: #ffffff;
+  border-radius: 16rpx;
+  display: flex;
+  padding: 20rpx;
+}
+.PPTCardList .imge {
+  width: 360rpx;
+  height: 200rpx;
+  flex-shrink: 0;
+  border-radius: 16rpx;
+}
+
+.PPTCardList .Tag {
+  margin-left: 24rpx;
+}
+
+.PPTCardList .text {
+  width: 100%;
+  font-size: 36rpx;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  margin-left: 24rpx;
+}
+
+.PPTCardList .visitNum {
+  width: 100%;
+  float: right;
+  /* 文本靠右 */
+  text-align: right;
+  font-size: 24rpx;
+  font-weight: 100;
+  color: rgb(0, 0, 0);
+  margin-top: 15%;
+}

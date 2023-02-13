@@ -1,0 +1,8 @@
+/* pages/register/register.wxss */
+.userAvatar{
+  width: 360rpx;
+  height: 360rpx;
+  margin: 0 200rpx;
+  margin-top: 150rpx;
+  border-radius: 500rpx;
+}
